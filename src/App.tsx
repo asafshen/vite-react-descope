@@ -9,7 +9,7 @@ function App() {
 			projectId={import.meta.env.VITE_DESCOPE_PROJECT_ID!}
 		>
 			<>
-				<h1>Vite + React</h1>
+				<h1>Vite + React + Descope</h1>
 				<MyComponent />
 			</>
 		</AuthProvider>
