@@ -12,6 +12,8 @@ npm install
 2. set Descope project id and token in `.env.local` file
 ```env
 VITE_DESCOPE_PROJECT_ID=your-project-id
+VITE_DESCOPE_BASE_URL=your-descope-base-url
+VITE_DESCOPE_BASE_STATIC_URL=your-descope-base-static-url
 ```
 
 ## Run
