@@ -26,7 +26,7 @@ function MyComponent() {
               whiteSpace: "pre-wrap",
               textAlign: "left",
               maxWidth: "600px",
-              maxHeight: "400px",
+              maxHeight: "200px",
               overflow: "auto",
             }}
           >
