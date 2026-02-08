@@ -13,6 +13,8 @@ function App() {
     >
       <>
         <h1>Vite + React + Descope</h1>
+        <h2>{import.meta.env.VITE_ENV_LABEL || 'Development'}</h2>
+        <h3><a href={import.meta.env.VITE_APP_URL || window.location.origin}>{import.meta.env.VITE_APP_URL || window.location.origin}</a></h3>
         <MyComponent />
       </>
     </AuthProvider>
