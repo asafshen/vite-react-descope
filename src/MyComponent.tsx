@@ -35,7 +35,7 @@ function MyComponent() {
         </div>
       )}
       {!isAuthenticated && <Descope flowId={
-        import.meta.env.VITE_DESCOPE_FLOW_ID || "login-register"
+        import.meta.env.VITE_DESCOPE_FLOW_ID || "sign-up-or-in"
       } />}
     </div>
   );
