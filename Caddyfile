@@ -1,0 +1,9 @@
+asaf-testing-app.com {
+	tls internal
+	reverse_proxy localhost:3000
+}
+
+staging.asaf-testing-app.com {
+	tls internal
+	reverse_proxy localhost:3001
+}
