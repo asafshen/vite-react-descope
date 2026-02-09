@@ -7,7 +7,7 @@
     "dev": "vite --port 3000 --host --mode production",
     "dev-stage": "vite --port 3001 --host --mode staging",
     "proxy": "sudo caddy run --config Caddyfile",
-    "dev-all": "concurrently -n prod,stage,proxy -c blue,green,yellow \"npm run dev\" \"npm run dev-stage\" \"npm run proxy\"",
+    "dev-all": "sudo -v && concurrently -n prod,stage,proxy -c blue,green,yellow \"npm run dev\" \"npm run dev-stage\" \"npm run proxy\"",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
