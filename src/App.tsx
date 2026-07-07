@@ -9,6 +9,9 @@ function App() {
     <AuthProvider
       projectId={import.meta.env.VITE_DESCOPE_PROJECT_ID!}
       baseUrl={import.meta.env.VITE_DESCOPE_BASE_URL}
+      // sessionTokenViaCookie={{
+      //   domain: import.meta.env.VITE_DESCOPE_SESSION_COOKIE_DOMAIN,
+      // }}
 	    baseStaticUrl={import.meta.env.VITE_DESCOPE_BASE_STATIC_URL}
     >
       <>

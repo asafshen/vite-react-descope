@@ -1,4 +1,4 @@
-import { useUser, useSession, Descope, useDescope } from "@descope/react-sdk";
+import { useUser, useSession, Descope, useDescope, getSessionToken } from "@descope/react-sdk";
 
 function MyComponent() {
   const { isAuthenticated, isSessionLoading } = useSession();
@@ -19,6 +19,19 @@ function MyComponent() {
           <p>User Email: {user.email}</p>
           <div>
             <button onClick={() => sdk.logout()}>Logout</button>
+          </div>
+          <div>
+            <h3>Session Token:</h3>
+            <code style={{ wordBreak: "break-all" }}>{getSessionToken()}</code>
+            <button
+              onClick={() => {
+                const token = getSessionToken();
+                if (token) navigator.clipboard.writeText(token);
+              }}
+              style={{ marginLeft: "8px" }}
+            >
+              Copy Token
+            </button>
           </div>
           <h3>Full User Object:</h3>
           <code
