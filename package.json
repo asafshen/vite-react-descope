@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
+    "dev:descope-dev": ". ~/.config/descope/descope-dev-env.sh && vite --port 3002",
+    "dev:tunnel": "vite --port 3000 --host 127.0.0.1 --base /app/",
     "dev-stage": "vite --port 3001 --host --mode staging",
     "proxy": "sudo caddy run --config Caddyfile",
     "dev-all": "sudo -v && concurrently -n prod,stage,proxy -c blue,green,yellow \"npm run dev\" \"npm run dev-stage\" \"npm run proxy\"",

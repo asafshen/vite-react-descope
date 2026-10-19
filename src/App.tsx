@@ -8,7 +8,8 @@ function App() {
   return (
     <AuthProvider
       projectId={import.meta.env.VITE_DESCOPE_PROJECT_ID!}
-      baseUrl={import.meta.env.VITE_DESCOPE_BASE_URL}
+      // {origin} = the page's own origin, so one build serves every vanity domain behind the gateway ({origin}/auth)
+      baseUrl={import.meta.env.VITE_DESCOPE_BASE_URL?.replace("{origin}", window.location.origin)}
       // sessionTokenViaCookie={{
       //   domain: import.meta.env.VITE_DESCOPE_SESSION_COOKIE_DOMAIN,
       // }}
